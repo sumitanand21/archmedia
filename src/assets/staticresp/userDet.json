@@ -1,0 +1,16 @@
+[
+    {
+        "id": "sa1",
+        "username": "sumit",
+        "email": "sumitanand2112@gmail.com",
+        "isadmin": true,
+        "password": "sumit"
+    },
+    {
+        "id": "admin2",
+        "username": "admin",
+        "email": "admin1234@gmail.com",
+        "isadmin": true,
+        "password": "admin"
+    }
+]

@@ -1,0 +1,53 @@
+<div class="spa-header set-background">
+  <div class="spa_head_tb_row">
+      <mat-icon class="spa-menu-icon menu-icon-css" [matMenuTriggerFor]="routeDetails" #routeDetMenuTrigger="matMenuTrigger">
+       menu
+      </mat-icon>
+      <!-- <mat-icon class="spa-menu-icon">menu</mat-icon> -->
+    <!-- <span class="spa_tile_text" [routerLink]="['/container']">MFE FRAMEWORK</span> -->
+    <div class="spa_tile_text1" > ARCH</div>
+    <!-- <span class="spa_tile_text2" *ngIf="spaService.appName" > | {{spaService.appName}}</span> -->
+    <div class="spa-menu-spacer">
+      <div class="spa-user-det">
+        <div class="label-route-wrap">
+          <div class="label-route" [routerLink]="['/home']" [routerLinkActive]="'main-active-route'">Home</div>
+          <div *ngIf="user.id" class="label-route" [routerLink]="['/userspec/gallery']" [routerLinkActive]="'main-active-route'">Gallery</div>
+          <div class="label-route" [routerLink]="['/about']" [routerLinkActive]="'main-active-route'">About Us</div>
+        </div>
+        <span fxShow="true" fxHide.lt-sm="true" class="profile-box-UTC show-none" >
+          {{currentDate | date:'yyyy-MM-dd HH:mm:ss'}} UTC &nbsp; 
+        </span>
+        <span *ngIf="user.id" class="profile-box-user-details" [matMenuTriggerFor]="userDetails" #userDetMenuTrigger="matMenuTrigger">
+          <div class="spa-user-details">
+                {{getFirstChar(user.username)}}
+          </div>
+          <!-- <mat-icon class="mat-icon-css"  ><img class="profile-img-icon"  src="assets/icons/icons8-user-50.png"   /></mat-icon> -->
+          
+          </span>
+
+          <mat-icon *ngIf="!user.id" class="spa-menu-icon" [routerLink]="['/login']">
+            login
+           </mat-icon>
+
+          <mat-menu #userDetails="matMenu" class="mfe-head-user_menu"  xPosition="before">
+            <div class="mfe-head-user-menu-wrap" (click)="$event.stopPropagation();" (keydown.tab)="$event.stopPropagation()">
+        <div class="mfe-head-menu-name"><span>{{user.username}} </span><a [href]="" target="_blank" (click)="logOut()"><mat-icon class="mat-icon-css">logout</mat-icon></a></div>
+        <div class="mfe-head-menu-email">{{user.email}}</div>
+            </div>
+          </mat-menu>
+
+          <mat-menu #routeDetails="matMenu" class="mfe-head-user_menu"  xPosition="before">
+            <div class="mfe-head-user-menu-wrap" (keydown.tab)="$event.stopPropagation()">
+        <div class="mfe-head-menu-route">
+          <div class="menu-label-route" [routerLink]="['/home']" [routerLinkActive]="'active-route'">Home</div>
+          <div *ngIf="user.id" class="menu-label-route" [routerLink]="['/userspec/gallery']" [routerLinkActive]="'active-route'">Gallery</div>
+          <div class="menu-label-route" [routerLink]="['/about']" [routerLinkActive]="'active-route'">About Us</div>
+        </div>
+
+            </div>
+          </mat-menu>
+        
+      </div>
+    </div>
+  </div>
+</div>

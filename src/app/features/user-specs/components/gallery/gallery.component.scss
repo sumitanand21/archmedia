@@ -1,0 +1,142 @@
+// .gallery-main{
+
+// height:100%;
+// width:100%;
+// overflow:auto;
+
+// .gallery-wrap{
+//     display: -ms-flexbox; /* IE10 */
+//     display: flex;
+//     -ms-flex-wrap: wrap; /* IE10 */
+//     flex-wrap: wrap;
+//     padding: 0 4px;
+//     margin: 0;
+// }
+
+//   /* Create four equal columns that sits next to each other */
+//   .gallery-column {
+//     -ms-flex: 25%; /* IE10 */
+//     flex: 25%;
+//     max-width: 25%;
+//     padding: 0 4px;
+//   }
+
+//   .gallery-column img {
+//     margin-top: 8px;
+//     vertical-align: middle;
+//     width: 100%;
+//   }
+
+//   .gallery-image{
+//     margin-top: 8px;
+//     vertical-align: middle;
+//     width: 100%;
+//   }
+
+//   /* Responsive layout - makes a two column-layout instead of four columns */
+//   @media screen and (max-width: 800px) {
+//     .gallery-column {
+//       -ms-flex: 50%;
+//       flex: 50%;
+//       max-width: 50%;
+//     }
+//   }
+
+//   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+//   @media screen and (max-width: 600px) {
+//     .gallery-column {
+//       -ms-flex: 100%;
+//       flex: 100%;
+//       max-width: 100%;
+//     }
+//   }
+
+// }
+
+.gallery-main {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    // background: linear-gradient(to right, #3380b7d9, #d027274f);
+    background: linear-gradient(to right, #3380b74a, #d027271f);
+
+    .gallery-header {
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 0px;
+
+        .header-text {
+            font-size: 32px;
+            font-weight: 500;
+            box-shadow: 0 4px 10px -11px #0000009c;
+            border-radius: 4px;
+            line-height: normal;
+            background: linear-gradient(#14b7a2, #382fb7f2);
+            background-clip: text;
+            color: transparent;
+        }
+    }
+    .gallery-wrap {
+        // height: 100%;
+        flex: 1 1 auto;
+        width: 100%;
+        margin: 0;
+        .gallery-column {
+            display: grid;
+            grid-gap: 10px;
+            padding: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: 250px;
+            grid-auto-flow: dense;
+            .card-wrap {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .tags-wrap {
+                display: flex;
+                padding: 8px;
+                color: blue;
+            }
+            .img-wrap {
+                width: 100%;
+                flex: 1 1 auto;
+                overflow: hidden;
+                transition: 0.5s;
+                position: relative;
+                &:hover {
+                    transform: scale(1.05);
+                    .overlay-img{
+                        display: inherit;
+                    }
+                }
+
+                .overlay-img{
+                  display: none;
+                top: 0;
+                background-color: #2178ca5e;
+                  height: 100%;
+                  width: 100%;
+                  position: absolute;
+                }
+
+    
+            }
+            .img-item {
+                width: 100%;
+                height: 100%;
+                max-height: 100%;
+                object-fit: cover;
+                transition: 0.5s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

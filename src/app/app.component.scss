@@ -1,0 +1,27 @@
+.app-wrap{
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    .header-wrap{
+        flex:0 1 auto;
+        background-color: red;
+    }
+
+    .content-wrap{
+        flex: 1 1 auto;
+        overflow: auto;
+        // background-color: blue;
+    }
+
+    .footer-wrap{
+        flex:0 1 auto; 
+        // background-color: pink;
+    }
+
+    .content-sub-wrap{
+        height:100%;
+        width:100%;
+    }
+
+}

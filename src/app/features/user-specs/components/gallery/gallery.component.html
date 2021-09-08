@@ -1,0 +1,60 @@
+<!-- <div class="gallery-main">
+<div class="gallery-wrap row"> 
+    <div class="gallery-column">
+      <img class="img-item" src="/assets/images/wedding.jpg">
+      <img class="img-item" src="/assets/images/rocks.jpg">
+      <img class="img-item" src="/assets/images/falls2.jpg">
+      <img class="img-item" src="/assets/images/paris.jpg">
+      <img class="img-item" src="/assets/images/nature.jpg">
+      <img class="img-item" src="/assets/images/mist.jpg">
+      <img class="img-item" src="/assets/images/paris.jpg">
+    </div>
+    <div class="gallery-column">
+      <img class="img-item" src="/assets/images/underwater.jpg">
+      <img class="img-item" src="/assets/images/ocean.jpg">
+      <img class="img-item" src="/assets/images/wedding.jpg">
+      <img class="img-item" src="/assets/images/mountainskies.jpg">
+      <img class="img-item" src="/assets/images/rocks.jpg">
+      <img class="img-item" src="/assets/images/underwater.jpg">
+    </div>  
+    <div class="gallery-column">
+      <img class="img-item" src="/assets/images/wedding.jpg">
+      <img class="img-item" src="/assets/images/rocks.jpg">
+      <img class="img-item" src="/assets/images/falls2.jpg">
+      <img class="img-item" src="/assets/images/paris.jpg">
+      <img class="img-item" src="/assets/images/nature.jpg">
+      <img class="img-item" src="/assets/images/mist.jpg">
+      <img class="img-item" src="/assets/images/paris.jpg">
+    </div>
+    <div class="gallery-column">
+      <img class="img-item" src="/assets/images/underwater.jpg">
+      <img class="img-item" src="/assets/images/ocean.jpg">
+      <img class="img-item" src="/assets/images/wedding.jpg">
+      <img class="img-item" src="/assets/images/mountainskies.jpg">
+      <img class="img-item" src="/assets/images/rocks.jpg">
+      <img class="img-item" src="/assets/images/underwater.jpg">
+    </div>
+  </div>
+</div> -->
+
+
+
+<div class="gallery-main">
+    <div class="gallery-header">
+        <div class="header-text">
+            Image Gallery
+        </div>
+ 
+    </div>
+    <div class="gallery-wrap">
+        <div class="gallery-column">
+            <div class="card-wrap" *ngFor="let imagedet of imageUrl">
+                <div class="tags-wrap">{{imagedet.tags}}</div>
+            <div class="img-wrap" (click)="openGalleryModal(imagedet.url)">
+                <img class="img-item" [src]="imagedet.url">
+                <div class="overlay-img"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+.footer-main{
+    height:40px;
+    // border-top: 1px solid #5827d8;
+    display: flex;
+    justify-content: space-between;
+    // padding: 0px 35px;
+    align-items: center;
+    // background-color:#5827d8;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+.text-label{
+    padding: 0 16px;
+}
+
+@media only screen and (max-width: 504px) {
+
+    .footer-main{
+        justify-content: center;
+    }
+
+  }

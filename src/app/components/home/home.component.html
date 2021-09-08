@@ -1,0 +1,79 @@
+<div class="about-main">
+    <div class="about-wrap">
+        <div class="about-head row">
+
+            <div class="col-md-6 col-sm-6 col-xs-12 head-text-wrap">
+                <div class="label-wrap">
+                    <span class="label-comp">Hi, It's Arch</span>
+                </div>
+                <div class="border-line"></div>
+                <div class="label-wrap">
+                    <span class="text-comp">We are the world’s largest social network, it’s also the most developed
+                        channel for organic and paid social marketing</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12 image-wrap">
+                <div class="input-main">
+                    <div class="input-wrap">
+                        <mat-form-field class="example-chip-list" appearance="fill">
+                            <mat-label>Add User</mat-label>
+                            <mat-chip-list #chipList aria-label="User selection">
+                              <mat-chip *ngFor="let seluserObj of selecedUser;let i=index" [selectable]="selectable" [removable]="removable" (removed)="remove(seluserObj,i)">
+                                {{seluserObj.username}}
+                                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                              </mat-chip>
+                              <input
+                                (change)="emptyInput()"
+                                placeholder="Select User..."
+                                #userInput
+                                [formControl]="userCtrl"
+                                [matAutocomplete]="auto"
+                                [matChipInputFor]="chipList"
+                                [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                >
+                            </mat-chip-list>
+                            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                              <mat-option class="cust-mat-option" *ngFor="let userDDObj of filtereduserDB | async" [value]="userDDObj"  [disabled]= "disableOption(userDDObj) == true">
+                                {{userDDObj.username}}
+                              </mat-option>
+                            </mat-autocomplete>
+                          </mat-form-field>
+
+                    </div>
+                </div>
+                <!-- <div class="col-md-6 col-sm-6 col-xs-12 image-wrap">
+<img class="image-css" src="./assets/images/niche-social-media-scaled.jpg" />
+</div> -->
+            </div>
+        </div>
+
+        <div class="about-content">
+            <div class="cont-label">
+                We're More Than World’s Media App.
+            </div>
+            <div class="cont-text">
+
+                People use ARCH to keep up with friends, family, and news using various forms of shared content
+                (everything from written updates to live video).
+                Brands who maintain a presence on the platform might use organic content for brand awareness, and/or
+                relationship nurturing through social customer service. Marketers can also tap ARCH's user data to reach
+                new customers with relevant advertising.
+
+            </div>
+        </div>
+
+        <div class="about-footer">
+            <div class="about-footer-wrap row">
+                <div class="col-md-4 col-sm-6 col-xs-12 single-img-wrap">
+                    <img class="single-img" src="./assets/images/mediaconnect.jpg" />
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 single-img-wrap">
+                    <img class="single-img" src="./assets/images/video-camera-b1lur.jpg" />
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 single-img-wrap">
+                    <img class="single-img" src="./assets/images/likesconnect.jpg" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

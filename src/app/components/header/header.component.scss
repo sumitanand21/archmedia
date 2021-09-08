@@ -1,0 +1,372 @@
+.header{
+    flex-shrink: 0;
+    flex-grow: 0;
+    // background: $background-color;
+    color: black;
+  }
+
+  .sidebar-img-icon {
+    width: 45px;
+    height: 62px;
+  }
+  .profile-img-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .profile-img-icon-fujitsu {
+    // width: 30px;
+    height: 30px;
+  }
+  .mat-icon-css {
+    cursor: pointer;
+    height: auto;
+    width: auto;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 12px;
+    &:active{
+      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
+    }
+  }
+  p {
+    // font-family: Lato;
+  }
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+  }
+  
+  h1.example-app-name {
+    margin-left: 8px;
+  }
+  
+  .example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+         causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+  }
+  
+  .example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+         `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+  }
+  
+  .example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .mat-toolbar.mat-primary {
+    z-index: 1000;
+    top: 0;
+    position: sticky !important;
+  }
+  .hamburger.mat-button:not(.starting) {
+    transition-duration: 0.4s;
+    transition-property: color, margin;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  .hamburger.mat-button {
+    height: 100%;
+    margin: -15px 8px 0 -10px;
+    padding: 0; 
+       margin-bottom: -15px;
+    margin-left: -15px !important;
+  }
+  .example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .example-container {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  
+  button.vertical-menu-item {
+    border: none;
+    background-color: transparent;
+    margin-right: 0;
+    padding-left: 6px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+  }
+  .level-1 {
+    // font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 14px;
+    transition: background-color .2s;
+    text-transform: uppercase;
+  }
+  .example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .nw-speed-icon{
+    &.goodSpeed{
+      em{
+        color: #6feb21;
+      }
+    }
+    &.slowSpeed{
+      em{
+        color: red;
+      }
+    }
+  }
+
+  // .mat-toolbar-row, .mat-toolbar-single-row {
+  //   padding: 0 8px !important;
+  // }
+  .profile-box {
+    // font-family: serif;
+    display: flex;
+  }
+
+  .profile-box-user-details{
+    // font-family: serif;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background: #9000ff;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .spa-user-details{
+    height: auto;
+    width: auto;
+    // background-color:#3B73B7;
+    color: #ffffff;
+    text-transform: capitalize;
+    // font-family: Segoe UI !important;
+    font-size:16px;
+    // margin-top: -4px;
+      }
+
+  .profile-box-UTC {
+    display: flex;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    // font-family: Segoe UI !important;
+    margin-right: 23px;
+  }
+
+  .menu-label-route{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px;
+    box-shadow: -2px 7px 6px -6px #777;
+    color: #000000ad;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    cursor: pointer;
+
+    &:active{
+      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
+    }
+  }
+
+  .label-route-wrap{
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+  }
+
+  .label-route{
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    margin-right: 16px;
+    cursor: pointer;
+
+    &:active{
+      outline: none;
+      border: none;
+      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+          0 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
+    }
+  }
+
+  .main-active-route{
+    background: #5e79b5;
+    color: white;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
+  }
+
+  .active-route{
+    background: #004fff33;
+    color: #000000ad;
+  }
+
+  .mfe-head-menu-route{
+    display:flex;
+    flex-direction: column;
+    align-self: stretch;
+
+  }
+
+  .profile-box-fujitsu {
+    // font-family: serif;
+    display: flex;
+    margin: 0px 20px;
+  }
+
+  .mfe-head-menu-name{
+    font-size: 20px;
+    font-weight: 500;
+    color: #232323;
+    // font-family: Segoe UI !important;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .mfe-head-menu-email{
+    font-size: 14px;
+    color: #707070;
+    // font-family: Segoe UI !important;
+    text-transform: lowercase;
+    margin-top: 12px;
+  }
+
+  .mfe-head-menu-icon{
+ width:100%;
+ margin-top: 12px;
+
+    .mfe-head-menu-icon-wrap{
+      // font-family: Segoe UI !important;
+      display: flex;
+      justify-content:space-between
+    }
+
+    .mfe-head-icon {
+      // width: 30px;
+      height: 22px;
+    }
+  }
+  
+
+
+  /*************new css********************/
+  .spa-header{
+    // background: #a30b1a;
+    color: black;
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+  }
+
+  .spa_head_tb_row{
+padding:0px 8px;
+display: flex;
+align-items: center;
+width: 100%;
+  }
+
+  .spa-menu-icon{
+    height: auto;
+    width: auto;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    &:active{
+      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
+    }
+  }
+
+  .spa_tile_text{
+    margin-left: 12px;
+    cursor: pointer;
+  }
+  .spa_tile_text1{
+    margin-left: 10px;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+  }
+  .spa_tile_text2{
+    margin-left: 10px;
+    font-size: large;
+  }
+  .spa-user-det{
+    display: flex;
+    align-items: center;
+  }
+
+  .spa-menu-spacer{
+    display: flex;
+    flex: 1 1 auto;
+    align-self: stretch;
+    justify-content:flex-end;
+  }
+
+
+  .mfe-head-user-menu-wrap{
+    height: auto;
+    padding: 12px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-icon-css{
+display: none;
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    .menu-icon-css{
+      display: inherit !important;
+    }
+
+    .label-route-wrap{
+      display: none !important;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .show-none {
+      display: none !important;
+    }
+  }
+
