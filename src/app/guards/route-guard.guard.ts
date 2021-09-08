@@ -17,7 +17,10 @@ export class RouteGuardGuard implements CanActivate, CanActivateChild, CanDeacti
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       const user = JSON.parse(sessionStorage.getItem('user'));
-      if (user && user.id) {
+      if (state.url === '/login' && user && user.id) {
+        this.router.navigate(['/home']);
+        return false;
+      } else if (state.url === '/userspec/gallery' && (!user || !user.id)) {
         this.router.navigate(['/home']);
         return false;
       }

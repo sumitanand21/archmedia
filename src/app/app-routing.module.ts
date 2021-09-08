@@ -12,7 +12,8 @@ const routes: Routes = [
   {
     path: 'userspec',
     loadChildren: () => import('./features/user-specs/user-specs.module').then(m => m.UserSpecsModule),
-    canLoad: [RouteGuardGuard]
+    canLoad: [RouteGuardGuard],
+    canActivate: [RouteGuardGuard]
   },
   { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
