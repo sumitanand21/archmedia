@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "optimized-build": "ng build --prod --aot --build-optimizer"
+    "optimized-build": "ng build --prod --aot --build-optimizer",
+    "optimised-github-build": "ng build --prod --aot --build-optimizer --base-href https://sumitanand21.github.io/archmedia/"
   },
   "private": true,
   "dependencies": {

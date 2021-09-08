@@ -31,7 +31,6 @@ export class HeaderComponent implements OnInit {
     const observer = {
       next: (user) => {
         this.user = user;
-        console.log('user', this.user);
 
       },
       error: (err) => console.log(err),

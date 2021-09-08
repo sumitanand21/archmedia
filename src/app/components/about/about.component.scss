@@ -102,8 +102,7 @@ display: grid;
     .image-wrap{
         height: 100%;
         width: 100%;
-        background-image: url("/assets/images/colored-smoke.jpg");
-        // transition: background-image 2s ease-in-out;
+        background-image: url('/assets/images/colored-smoke.jpg');
         background-size: cover;
         background-position: center;
 
@@ -227,8 +226,7 @@ display: grid;
     height: 100%;
     width: 100%;
     background: linear-gradient(to right, #9000ff, #4700ff);
-    // background-image: url(/assets/images/200w.gif);
-    background-image: url(/assets/images/giphy.webp);
+    background-image: url('/assets/images/giphy.webp');
     border-radius: 4px;
     position: relative;
     display: flex;
@@ -244,9 +242,8 @@ display: grid;
 
 
 .text-lable {
-    background-image: url(/assets/images/200w.gif);
+    background-image: url('/assets/images/200w.gif');
     background-position: center;
-	// background-image: url(/assets/images/giphy.webp);
 	background-size: cover;
 	color: transparent;
     background-clip: text;

@@ -1,3 +1,24 @@
+
+<div class="gallery-main">
+    <div class="gallery-header">
+        <div class="header-text">
+            Image Gallery
+        </div>
+ 
+    </div>
+    <div class="gallery-wrap">
+        <div class="gallery-column">
+            <div class="card-wrap" *ngFor="let imagedet of imageUrl">
+                <div class="tags-wrap">{{imagedet.tags}}</div>
+            <div class="img-wrap" (click)="openGalleryModal(imagedet.url)">
+                <img class="img-item" [src]="imagedet.url">
+                <div class="overlay-img"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- <div class="gallery-main">
 <div class="gallery-wrap row"> 
     <div class="gallery-column">
@@ -38,23 +59,3 @@
 </div> -->
 
 
-
-<div class="gallery-main">
-    <div class="gallery-header">
-        <div class="header-text">
-            Image Gallery
-        </div>
- 
-    </div>
-    <div class="gallery-wrap">
-        <div class="gallery-column">
-            <div class="card-wrap" *ngFor="let imagedet of imageUrl">
-                <div class="tags-wrap">{{imagedet.tags}}</div>
-            <div class="img-wrap" (click)="openGalleryModal(imagedet.url)">
-                <img class="img-item" [src]="imagedet.url">
-                <div class="overlay-img"></div>
-            </div>
-            </div>
-        </div>
-    </div>
-</div>

@@ -29,9 +29,9 @@ export class AboutComponent implements OnInit, OnDestroy, AfterViewChecked, Afte
 
   constructor(private cdref: ChangeDetectorRef, private sanitize: DomSanitizer) {
     this.bgImgs = [
-      '/assets/images/269530.jpg',
-      '/assets/images/3200191.jpg',
-      '/assets/images/colored-smoke.jpg',
+      './assets/images/269530.jpg',
+      './assets/images/3200191.jpg',
+      './assets/images/colored-smoke.jpg',
     ];
     this.currentImage = this.bgImgs[0];
   }
